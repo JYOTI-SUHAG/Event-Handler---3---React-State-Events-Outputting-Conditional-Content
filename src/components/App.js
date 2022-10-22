@@ -1,26 +1,47 @@
-import React from 'react'
+mport React from 'react'
+
 import '../styles/App.css';
+
 const App = () => {
 
-  const handleInput = (event) =>{
-   // use console.log
-  }
+ 
 
-  // do not change id of input elements
-  return (
-    <div id="main">
-      <label htmlFor='text-input'>Text Input:- </label>
-      <input id="text-input" type={'text'} />
+ const handleInput = (event) =>{
 
-      <br/>
-      <br/>
+   console.log(`Input in #${event.target.id} is ${event.target.value}`)
 
-      <label htmlFor='num-input'>Number input</label>
-      <input id="num-input"  type={'number'} />
-      <br/>
-    </div>
-  )
+ }
+
+ return (
+
+   <div id="main">
+
+     <label htmlFor='text-input'>Text Input:- </label>
+
+     <input id="text-input" onChange={handleInput} type={'text'} /> //useOnchange
+
+ 
+
+     <br/>
+
+     <br/>
+
+ 
+
+     <label htmlFor='num-input'>Number input</label>
+
+     <input id="num-input" onChange={handleInput} type={'number'} /> //oncHnage
+
+     <br/>
+
+   </div>
+
+ )
+
 }
 
+ 
+
+ 
 
 export default App;
